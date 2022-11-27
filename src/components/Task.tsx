@@ -1,19 +1,18 @@
 import styles from './Task.module.css'
 import {Circle, Check} from 'phosphor-react'
-let status = 0
-let Checkbox:any
-if (status === 0) {      
-    Checkbox = <Circle className={styles.Todo}/>;    
-}
-else{      
-    Checkbox = <Check className={styles.Done}/>;   
+import { useState } from 'react';
+
+interface iTask{
+    task: string;
+    status: boolean;
 }
 
-export function Task() {
+export function Task({status, task} : iTask) {
+
     return(
         <div className={styles.TaskContainer}>
-            {Checkbox}
-            <p className={status === 0 ? styles.ToBeDone : styles.Completed }>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+            {status === false ? <Circle className={styles.Todo}/> : <Check className={styles.Done}/>}
+            <p className={status === false ? styles.ToBeDone : styles.Completed }>{task}</p>
         </div>
     )
 }

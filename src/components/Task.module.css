@@ -1,15 +1,20 @@
 .TaskContainer{
-    background-color: var(--gray-500);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    width: 100%;
     display: flex;
     flex-direction: row;
-}
+    align-items: flex-start;
+    background-color: var(--gray-500);
+    padding: 1rem;
+    gap: 0.75rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: 1px solid var(--gray-400);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    }
 
 .TaskContainer p{
-    padding-left: 12px;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
 
 }
 
