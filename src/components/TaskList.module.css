@@ -1,0 +1,11 @@
+.TaskContainer {
+    /* width: 46rem; */
+    padding: 5.6rem;
+    display: flex;
+    justify-content: center;
+}
+.TaskStatus {
+    display: flex;
+    flex-direction: row;
+    gap: 100%;
+}
