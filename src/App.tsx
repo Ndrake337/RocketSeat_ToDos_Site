@@ -9,7 +9,7 @@ export function App() {
   return (
     <div className={styles.mainDiv}>
       <Header />
-      {/* <TaskList /> */}
+      <TaskList />
     </div>
   )
 }
