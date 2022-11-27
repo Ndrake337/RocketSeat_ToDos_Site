@@ -1,0 +1,42 @@
+.TaskContainer{
+    background-color: var(--gray-500);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.TaskContainer p{
+    padding-left: 12px;
+    font-weight: 400;
+
+}
+
+.ToBeDone {
+    font-size: 14px;
+    line-height: 140%;
+    color: --gray-100;
+}
+.Completed {
+    font-size: 14px;
+    line-height: 140%;
+    color: --gray-300;
+    text-decoration-line: line-through;
+}
+
+.status {
+    /* appearance: none; */
+    border-radius: 50%;
+}
+
+.Todo {
+    color: var(--blue);
+}
+.Done {
+    background-color: var(--purple-dark);
+    color: var(--gray-100);
+    border-radius: 100%;
+    border: 2px solid var(--purple-dark);
+    font-weight: bold;
+}
