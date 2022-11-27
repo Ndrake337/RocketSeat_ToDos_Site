@@ -1,6 +1,6 @@
-import styles from './TaskList.module.css'
+import styles from './TaskCount.module.css'
 
-export function TaskList() {
+export function TaskCount() {
     return(
         <div className={styles.TaskContainer}>
             <div className={styles.TaskStatus}>

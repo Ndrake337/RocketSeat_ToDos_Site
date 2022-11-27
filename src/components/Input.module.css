@@ -15,6 +15,7 @@
     padding: 1rem;
     border-radius:0.5rem;
     border-color: var(--gray-700);
+    overflow: hidden;
 }
 
 .InputWrapper button {

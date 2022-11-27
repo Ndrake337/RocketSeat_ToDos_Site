@@ -1,7 +1,7 @@
 import  "./global.css";
 import  styles  from "./App.module.css";
 import { Header } from "./components/Header";
-import { TaskList } from "./components/TaskList";
+import { TaskCount } from "./components/TaskCount";
 
 
 export function App() {
@@ -9,7 +9,7 @@ export function App() {
   return (
     <div className={styles.mainDiv}>
       <Header />
-      <TaskList />
+      <TaskCount />
     </div>
   )
 }
