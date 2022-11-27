@@ -1,5 +1,5 @@
 import styles from './Header.module.css'
-import logo from '../assets/logo.svg'
+import logo from '../assets/Logo.svg'
 import { Input } from "./Input";
 
 export function Header (){
