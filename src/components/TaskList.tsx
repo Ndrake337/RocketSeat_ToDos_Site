@@ -3,7 +3,7 @@ import clipboard from '../assets/Clipboard.svg'
 import {Task} from './Task'
 
 export function TaskList() {
-    const emptyTaskList = []
+    //const emptyTaskList = []
     const TaskList = [
         {id: 1, Task: "Ler um Livro.", status: false},
         {id: 2, Task: "Estudar JS.", status: false},

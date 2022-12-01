@@ -1,5 +1,5 @@
 import styles from './Task.module.css'
-import {Circle, Check} from 'phosphor-react'
+import {Trash, Circle, Check} from 'phosphor-react'
 import { useState } from 'react';
 
 interface iTask{
@@ -8,11 +8,20 @@ interface iTask{
 }
 
 export function Task({status, task} : iTask) {
-
+    const [taskStatus, setTaskStatus] = useState(status)
+    function changeTaskStatus(){
+        if(taskStatus === true){
+            setTaskStatus(false)
+        }
+        else{
+            setTaskStatus(true)
+        }
+    }
     return(
         <div className={styles.TaskContainer}>
-            {status === false ? <Circle className={styles.Todo}/> : <Check className={styles.Done}/>}
-            <p className={status === false ? styles.ToBeDone : styles.Completed }>{task}</p>
+            {taskStatus === false ? <Circle className={styles.Todo} onClick={changeTaskStatus}/> : <Check className={styles.Done} onClick={changeTaskStatus}/>}
+            <p className={taskStatus === false ? styles.ToBeDone : styles.Completed }>{task}</p>
+            <Trash size={14} />
         </div>
     )
 }
