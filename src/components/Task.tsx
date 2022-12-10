@@ -21,7 +21,7 @@ export function Task({status, task} : iTask) {
         <div className={styles.TaskContainer}>
             {taskStatus === false ? <Circle className={styles.Todo} onClick={changeTaskStatus}/> : <Check className={styles.Done} onClick={changeTaskStatus}/>}
             <p className={taskStatus === false ? styles.ToBeDone : styles.Completed }>{task}</p>
-            <Trash size={14} />
+            <div className={styles.TrashWrapper}><Trash size={14} /></div>
         </div>
     )
 }
