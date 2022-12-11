@@ -19,6 +19,10 @@
     overflow: hidden;
 }
 
+.FormText :focus {
+    border: 1px solid var(--purple-dark);
+}
+
 .InputWrapper button {
     display: flex;
     flex-direction: row;
@@ -32,4 +36,7 @@
     border-color: transparent;
     border-radius:0.5rem;
     text-justify: inherit;
+}
+.InputWrapper button:hover {
+    background-color: var(--blue);
 }

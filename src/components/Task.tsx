@@ -3,27 +3,27 @@ import {Trash, Circle, Check} from 'phosphor-react'
 import { useState } from 'react';
 
 interface iTask{
+    id: number;
     task: string;
     status: boolean;
+    onCompleteTask: (id: number) => void
+    onDeleteTask: (id: number) => void
 }
 
-export function Task({status, task} : iTask) {
-    const [taskStatus, setTaskStatus] = useState(status)
+export function Task({id ,status, task, onCompleteTask, onDeleteTask} : iTask) {
     
+    function handleCompleteTask(){
+        onCompleteTask(id)
+    }
 
-    function changeTaskStatus(){
-        if(taskStatus === true){
-            setTaskStatus(false)
-        }
-        else{
-            setTaskStatus(true)
-        }
+    function handleDeleteTask(){
+        onDeleteTask(id)
     }
     return(
         <div className={styles.TaskContainer}>
-            {taskStatus === false ? <Circle className={styles.Todo} onClick={changeTaskStatus}/> : <Check className={styles.Done} onClick={changeTaskStatus}/>}
-            <p className={taskStatus === false ? styles.ToBeDone : styles.Completed }>{task}</p>
-            <div className={styles.TrashWrapper}><Trash size={14} /></div>
+            {status === false ? <div className={styles.Todo} onClick={handleCompleteTask}/> : <Check className={styles.Done} onClick={handleCompleteTask}/>}
+            <p className={status === false ? styles.ToBeDone : styles.Completed }>{task}</p>
+            <div className={styles.TrashWrapper} onClick={handleDeleteTask}><Trash size={16}/></div>
         </div>
     )
 }
