@@ -4,22 +4,17 @@
     justify-content: center;
     padding-top: 5.5rem;
     /* overflow: auto; */
-    position: inherit ;
+    /* position: inherit ; */
 }
 
-.TaskContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
 .TaskStatus{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0px;
-    gap: 30rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* gap: 30rem; */
     align-self: stretch;
     width: 46rem;
     font-size: 0.875rem;
