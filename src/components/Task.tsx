@@ -9,6 +9,8 @@ interface iTask{
 
 export function Task({status, task} : iTask) {
     const [taskStatus, setTaskStatus] = useState(status)
+    
+
     function changeTaskStatus(){
         if(taskStatus === true){
             setTaskStatus(false)

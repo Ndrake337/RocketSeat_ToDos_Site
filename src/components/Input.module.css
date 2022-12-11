@@ -4,6 +4,7 @@
     top: 11rem;
     flex-direction: row;
     gap:0.5rem;
+    position: absolute;
 }
 .FormText {
     width: 40rem;

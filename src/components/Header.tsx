@@ -2,7 +2,8 @@ import styles from './Header.module.css'
 import logo from '../assets/Logo.svg'
 import { Input } from "./Input";
 
-export function Header (){
+export function Header () {
+
     return (
         <div className={styles.wrapper}>
             <header className={styles.header}>
@@ -14,7 +15,6 @@ export function Header (){
                     />
                 </a>
             </header>
-            <Input />
         </div>
     )
 }
